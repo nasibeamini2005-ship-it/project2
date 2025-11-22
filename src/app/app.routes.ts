@@ -9,21 +9,25 @@ import { UsersPage } from './+pages/+private/users-page/users-page';
 import { LogoutPage } from './+pages/+private/logout-page/logout-page';
 
 export const routes: Routes = [
-    {path:'public', component:PublicTemplate,children:[
-        {path:'home', component:HomePage},
-        {path:'about', component:AboutPage},
-        {path:'contact', component:ContactPage},
-        {path:'', redirectTo:'home',pathMatch:'prefix'},
-        {path:'**', redirectTo:'home'}
-    ]},
-{path:'private', component:PrivateTemplate, children:[
-    {path:'dashboard', component:DashboardPage},
-    {path:'users', component:UsersPage},
-    {path:'logout', component:LogoutPage},
-    {path:'', redirectTo:'dashboard',pathMatch:'prefix'},
-    {path:'**',redirectTo:'dashboard'}
-   
-]},
-{path:'',redirectTo:'public', pathMatch:'full'},
-{path:'**',redirectTo:'public'}
+    {
+        path: 'public', component: PublicTemplate, children: [
+            { path: 'home', component: HomePage },
+            { path: 'about', component: AboutPage },
+            { path: 'contact', component: ContactPage },
+            { path: '', redirectTo: 'home', pathMatch: 'prefix' },
+            { path: '**', redirectTo: 'home' }
+        ]
+    },
+    {
+        path: 'private', component: PrivateTemplate, children: [
+            { path: 'dashboard', component: DashboardPage },
+            { path: 'users', component: UsersPage },
+            { path: 'logout', component: LogoutPage },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+            { path: '**', redirectTo: 'dashboard' }
+
+        ]
+    },
+    { path: '', redirectTo: 'public', pathMatch: 'full' },
+    { path: '**', redirectTo: 'public' }
 ];
