@@ -6,6 +6,7 @@ import { ContactPage } from './+pages/+public/contact-page/contact-page';
 import { PrivateTemplate } from './+pages/+private/private-template/private-template';
 import { DashboardPage } from './+pages/+private/dashboard-page/dashboard-page';
 import { UsersPage } from './+pages/+private/users-page/users-page';
+import { LogoutPage } from './+pages/+private/logout-page/logout-page';
 
 export const routes: Routes = [
     {path:'public', component:PublicTemplate,children:[
@@ -18,6 +19,7 @@ export const routes: Routes = [
 {path:'private', component:PrivateTemplate, children:[
     {path:'dashboard', component:DashboardPage},
     {path:'users', component:UsersPage},
+    {path:'logout', component:LogoutPage},
     {path:'', redirectTo:'dashboard',pathMatch:'prefix'},
     {path:'**',redirectTo:'dashboard'}
    
