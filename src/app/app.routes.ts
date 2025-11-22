@@ -7,6 +7,7 @@ import { PrivateTemplate } from './+pages/+private/private-template/private-temp
 import { DashboardPage } from './+pages/+private/dashboard-page/dashboard-page';
 import { UsersPage } from './+pages/+private/users-page/users-page';
 import { LogoutPage } from './+pages/+private/logout-page/logout-page';
+import { LoginPage } from './+pages/+public/login-page/login-page';
 
 export const routes: Routes = [
     {
@@ -14,6 +15,7 @@ export const routes: Routes = [
             { path: 'home', component: HomePage },
             { path: 'about', component: AboutPage },
             { path: 'contact', component: ContactPage },
+            {path:'login', component: LoginPage},
             { path: '', redirectTo: 'home', pathMatch: 'prefix' },
             { path: '**', redirectTo: 'home' }
         ]
