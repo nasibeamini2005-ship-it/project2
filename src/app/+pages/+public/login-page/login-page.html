@@ -1,1 +1,23 @@
-<p>login-page works!</p>
+<section class="login">
+    <div>
+        <label for="username">نام کاربری:</label>
+        <input [(ngModel)]="username" name="username" type="text" placeholder="نام کاربری">
+    </div>
+    <div>
+        <label for=""> کلمه عبور:</label>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="کلمه عبور ">
+    </div>
+    <div>
+        <input [(ngModel)]="remember" name="remember" type="checkbox" placeholder="checkbox">
+        <label for="remember">من را به خاطر بسپار</label>
+    </div>
+    <div>
+        <button (click)="login()">ورود</button>
+    </div>
+    @if(massage!=''){
+       <div class="massage">
+        {{massage}}
+    </div>  
+    }
+    
+</section>
