@@ -13,9 +13,9 @@ export class LoginPage {
   password:string='';
   remember:boolean=false;
   massage:string='';
-  router=inject(Router); //  در اینجا به روتر انگولار نیاز داریم
+  router=inject(Router);
 login(){
-if(this.username=='admin'&& this.password=='admin'){
+if(this.username=='amini'&& this.password=='N100'){
   this.router.navigateByUrl('/private/dashboard')
 }
 else{
